@@ -1,0 +1,10 @@
+.chicken {
+  height: 24rem;
+  width: 23rem;
+  background-image: url("../images/chicken.png");
+  background-size: cover;
+  border: 0;
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=buttons.css.map */
