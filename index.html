@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <div id="container">
 
         <main>
 
@@ -19,7 +18,7 @@
                 <button id="clickButton" class="chicken"></button>
 
                 <div id="display"> <!-- Contains counter information -->
-                    <p id="chickenCounter">Chickens = <span id="showChickens" class="number">0</span></p>
+                    <h1 id="chickenCounter">Chickens<br><span id="showChickens" class="number">0</span></h1>
 
                     <p>Chickens per second = <span id="showChickensPerSecond" class="number">0</span></p>
 
@@ -35,68 +34,50 @@
                 <div class="multiplier"> <!-- First multiplier -->
                     <div class="containerImage"> <!-- Image container -->
                         <img src="images/axe-hunter.png" class="multiplierImage" alt="8-bit hunter with axe">
-                        <div class="buyButtonContainer"> <!-- Buy button container -->
-                            <button class="buyButton" id="buyAxe()">Buy</button>
-                        </div>
                     </div>
 
                     <div class="multiplierText"> <!-- Container with stats about the item -->
                         <p>Axe hunters: <span id="axeNum">0</span></p>
                         <p>Axe hunter cost: <span id="axeCost">10</span></p>
-                        <p>Chicken x2 multiplier per click</p>
+                        <p>Chicken x2 multiplier/click</p>
+                        <div class="buyButtonContainer"> <!-- Buy button container -->
+                            <button class="buyButton" id="buyAxe()">Buy</button>
+                        </div>
                     </div>
                 </div>
 
                 <div class="multiplier"> <!-- Second multiplier -->
                     <div class="containerImage"> <!-- Image container -->
                         <img src="images/fox.png" class="multiplierImage" alt="8-bit fox">
-                        <div class="buyButtonContainer"> <!-- Buy button container -->
-                            <button class="buyButton">Buy</button>
-                        </div>
                     </div>
 
                     <div class="multiplierText"> <!-- Container with stats about the item -->
                         <p>Foxes: <span id="foxNum">0</span></p>
                         <p>Foxe cost: <span id="foxCost">20</span></p>
                         <p>Auto-click, +1 chicken per second</p>
+                        <div class="buyButtonContainer"> <!-- Buy button container -->
+                            <button class="buyButton">Buy</button>
+                        </div>
                     </div>
                 </div>
 
                 <div class="multiplier"> <!-- Third multiplier -->
                     <div class="containerImage"> <!-- Image container -->
                         <img src="images/hunter.png" class="multiplierImage">
-                        <div class="buyButtonContainer"> <!-- Buy button container -->
-                            <button class="buyButton">Buy</button>
-                        </div>
                     </div>
 
                     <div class="multiplierText"> <!-- Container with stats about the item -->
                         <p>Shotgun Hunters: <span id="shotNum">0</span></p>
                         <p>Shotgun hunter cost: <span id="shotCost">200</span></p>
                         <p>The bonus, boost your score for 30 seconds</p>
-                    </div>
-                </div>
-
-                <!-- <div class="multiplier">
-                    <div class="containerImage">
-                        <img>
-                        <div class="buyButtonContainer">
+                        <div class="buyButtonContainer"> <!-- Buy button container -->
                             <button class="buyButton">Buy</button>
                         </div>
                     </div>
-
-                    <div class="multiplierText">
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                </div> -->
+                </div>
             </div>
 
         </main>
-
-
-    </div>
 
     <script type="text/javascript" src="JS/clicker.js"></script>
 
