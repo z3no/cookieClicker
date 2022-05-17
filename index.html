@@ -11,75 +11,75 @@
 
 <body>
 
-        <main>
+<main>
+    <div id="container">
+        <div class="chickenContainer">
+            <!-- The button you have to click -->
+            <button id="clickButton" class="chicken"></button>
 
-            <div class="chickenContainer">
-                <!-- The button you have to click -->
-                <button id="clickButton" class="chicken"></button>
+            <div id="display"> <!-- Contains counter information -->
+                <h1 id="chickenCounter">Chickens<br></h1><h2><span id="showChickens" class="number">0</span></h2>
 
-                <div id="display"> <!-- Contains counter information -->
-                    <h1 id="chickenCounter">Chickens<br><span id="showChickens" class="number">0</span></h1>
+                <p>Chickens per second = <span id="showChickensPerSecond" class="number">0</span></p>
 
-                    <p>Chickens per second = <span id="showChickensPerSecond" class="number">0</span></p>
+                <p>Chickens per click = <span id="showChickensPerClick" class="number">1</span></p>
 
-                    <p>Chickens per click = <span id="showChickensPerClick" class="number">1</span></p>
-
-                    <p id="gameOver"></p>
-                </div>
+                <p id="gameOver"></p>
             </div>
+        </div>
 
-            <!-- Multiplier items that can be bought -->
-            <div class="multiplierContainer"> <!-- Container with 4 items you can buy -->
+        <!-- Multiplier items that can be bought -->
+        <div class="multiplierContainer"> <!-- Container with 4 items you can buy -->
 
-                <div class="multiplier"> <!-- First multiplier -->
-                    <div class="containerImage"> <!-- Image container -->
-                        <img src="images/axe-hunter.png" class="multiplierImage" alt="8-bit hunter with axe">
-                    </div>
-
-                    <div class="multiplierText"> <!-- Container with stats about the item -->
-                        <p>Jack Hack: <span id="axeNum">0</span></p>
-                        <p>Jack Hack cost: <span id="axeCost">10</span></p>
-                        <p>x2 multiplier</p>
-                        <div class="buyButtonContainer"> <!-- Buy button container -->
-                            <button class="buyButton" id="buyAxe">Buy</button>
-                        </div>
-                    </div>
+            <div class="multiplier"> <!-- First multiplier -->
+                <div class="containerImage"> <!-- Image container -->
+                    <img src="images/axe-hunter.png" class="multiplierImage" alt="8-bit hunter with axe">
                 </div>
 
-                <div class="multiplier"> <!-- Second multiplier -->
-                    <div class="containerImage"> <!-- Image container -->
-                        <img src="images/fox.png" class="multiplierImage" alt="8-bit fox">
-                    </div>
-
-                    <div class="multiplierText"> <!-- Container with stats about the item -->
-                        <p>Fantastic Mr. Fox: <span id="foxNum">0</span></p>
-                        <p>Mr. Fox cost: <span id="foxCost">20</span></p>
-                        <p>Auto-click, +1 chicken per second</p>
-                        <div class="buyButtonContainer"> <!-- Buy button container -->
-                            <button class="buyButton" id="buyFox">Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="multiplier"> <!-- Third multiplier -->
-                    <div class="containerImage"> <!-- Image container -->
-                        <img src="images/hunter.png" class="multiplierImage">
-                    </div>
-
-                    <div class="multiplierText"> <!-- Container with stats about the item -->
-                        <p>Bubba Blue "Trigger": <span id="shotNum">0</span></p>
-                        <p>Bubba Blue cost: <span id="shotCost">200</span></p>
-                        <p>The bonus, boost your score for 30 seconds</p>
-                        <div class="buyButtonContainer"> <!-- Buy button container -->
-                            <button class="buyButton" id="buyShotgun">Buy</button>
-                        </div>
+                <div class="multiplierText"> <!-- Container with stats about the item -->
+                    <p>Jack Hack: <span id="axeNum">0</span></p>
+                    <p>Jack Hack cost: <span id="axeCost">10</span></p>
+                    <p>x2 multiplier</p>
+                    <div class="buyButtonContainer"> <!-- Buy button container -->
+                        <button class="buyButton" id="buyAxe">Buy</button>
                     </div>
                 </div>
             </div>
 
-        </main>
+            <div class="multiplier"> <!-- Second multiplier -->
+                <div class="containerImage"> <!-- Image container -->
+                    <img src="images/fox.png" class="multiplierImage" alt="8-bit fox">
+                </div>
 
-    <script type="text/javascript" src="JS/clicker.js"></script>
+                <div class="multiplierText"> <!-- Container with stats about the item -->
+                    <p>Fantastic Mr. Fox: <span id="foxNum">0</span></p>
+                    <p>Mr. Fox cost: <span id="foxCost">20</span></p>
+                    <p>Auto-click, +1 chicken per second</p>
+                    <div class="buyButtonContainer"> <!-- Buy button container -->
+                        <button class="buyButton" id="buyFox">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="multiplier"> <!-- Third multiplier -->
+                <div class="containerImage"> <!-- Image container -->
+                    <img src="images/hunter.png" class="multiplierImage">
+                </div>
+
+                <div class="multiplierText"> <!-- Container with stats about the item -->
+                    <p>Bubba Blue "Trigger": <span id="shotNum">0</span></p>
+                    <p>Bubba Blue cost: <span id="shotCost">200</span></p>
+                    <p>The bonus, boost your score for 30 seconds</p>
+                    <div class="buyButtonContainer"> <!-- Buy button container -->
+                        <button class="buyButton" id="buyShotgun">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src="JS/clicker.js"></script>
 
 </body>
 
