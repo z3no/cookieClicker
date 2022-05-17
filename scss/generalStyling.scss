@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-color: lightgoldenrodyellow;
+  background: url("../images/chickens_bg.webp") lightgoldenrodyellow;
   font-size: 1.6rem;
   font-family: 'Press Start 2P', cursive;
   /* reset 10*1.6 = 16px */
@@ -25,7 +25,7 @@ main {
 }
 
 .chickenContainer {
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.9);
   width: 30%;
   height: 90vh;
   margin: 2rem;
@@ -55,7 +55,7 @@ main {
 }
 
 .multiplierContainer {
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.9);
   margin: 2rem;
   padding: 2rem;
   width: 50%;
