@@ -23,6 +23,9 @@ axeBuyBtn.addEventListener("click", buyAxe);
 // Fantastic Mr. Fox buy button
 const foxBuyBtn = document.getElementById('buyFox');
 foxBuyBtn.addEventListener('click', buyFox);
+// Bubba Blue "Trigger" button
+const shotgunBuyBtn = document.getElementById('buyShotgun');
+shotgunBuyBtn.addEventListener("click", buyShotgun);
 
 //function that gets called each time you click the chicken
 function increment() {
@@ -57,10 +60,11 @@ function buyAxe(){
         chickensPerClick *= 2;
         document.getElementById('showChickensPerClick').innerText = chickensPerClick;
     } else {
-        alert("You don't have enough dead chickens!")
+        alert("You don't have enough chickens!")
     }
 }
-// called when the user buys the Fantastic Mr. Fox
+
+// function called when the user buys the Fantastic Mr. Fox
 function buyFox(){
     // check if you have enough chickens
     if (chickens >= foxCost){
@@ -77,6 +81,31 @@ function buyFox(){
         chickensPerSecond += 1;
         document.getElementById('showChickensPerSecond').innerText = chickensPerSecond;
     } else { //if you don't have enough chickens
-        alert("You don't have enough dead chickens!")
+        alert("You don't have enough chickens!")
+    }
+}
+
+// timer for the bonus
+
+
+// function called when the user buys Bubba
+function buyShotgun() {
+    if (chickens >= shotCost){
+        //subtract cost
+        chickens -= shotCost;
+        document.getElementById('showChickens').innerText = chickens;
+        //increment the number of Mr. Foxes you own
+        shotguns++;
+        document.getElementById('shotNum').innerText = shotguns;
+        // make the price more expensive after buying
+        shotCost *= 3.5;
+        document.getElementById('shotCost').innerText = shotCost;
+        //increase the chickens by 200%
+        chickensPerSecond *= 3;
+        chickensPerClick *= 3;
+        document.getElementById('showChickensPerSecond').innerText = chickensPerSecond;
+        document.getElementById('showChickensPerClick').innerText = chickensPerClick;
+    } else {
+        alert("You don't have enough chickens!")
     }
 }
