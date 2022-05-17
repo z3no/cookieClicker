@@ -15,9 +15,12 @@
   }
 
   &:active {
-    transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
+    transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    background-image: url("../images/chicken-leg.png");
+    height: 18rem;
+    width: 18rem;
   }
 }
 
