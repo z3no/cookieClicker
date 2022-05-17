@@ -4,14 +4,14 @@ let chickensPerSecond = 0;
 let chickensPerClick = 1;
 
 // cost of items
-let axeCost = 10;
-let foxCost = 20;
-let shotCost = 200;
+let axeCost = 25;
+let foxCost = 30;
+let shotCost = 1000;
 
 // how many items you have
 let axes = 0;
 let foxes = 0;
-let shotguns = 0
+let shotgunTime = 30;
 
 // buttons
 // Chicken increment button
@@ -25,7 +25,7 @@ const foxBuyBtn = document.getElementById('buyFox');
 foxBuyBtn.addEventListener('click', buyFox);
 // Bubba Blue "Trigger" button
 const shotgunBuyBtn = document.getElementById('buyShotgun');
-shotgunBuyBtn.addEventListener("click", buyShotgun);
+shotgunBuyBtn.addEventListener("click", buyBubba);
 
 //function that gets called each time you click the chicken
 function increment() {
@@ -85,26 +85,32 @@ function buyFox(){
     }
 }
 
-// timer for the bonus
-
-
 // function called when the user buys Bubba
-function buyShotgun() {
+function buyBubba(){
     if (chickens >= shotCost){
-        //subtract cost
+        //subtract the cost
         chickens -= shotCost;
         document.getElementById('showChickens').innerText = chickens;
-        //increment the number of Mr. Foxes you own
-        shotguns++;
-        document.getElementById('shotNum').innerText = shotguns;
-        // make the price more expensive after buying
-        shotCost *= 3.5;
+        //increase the cost of the next Bubba
+        shotCost *= 3.75;
         document.getElementById('shotCost').innerText = shotCost;
-        //increase the chickens by 200%
-        chickensPerSecond *= 3;
-        chickensPerClick *= 3;
-        document.getElementById('showChickensPerSecond').innerText = chickensPerSecond;
+        chickensPerClick *= 2;
         document.getElementById('showChickensPerClick').innerText = chickensPerClick;
+        chickensPerSecond *= 2;
+        document.getElementById('showChickensPerSecond').innerText = chickensPerSecond;
+        let bubbaMultiplier = setInterval(function (){
+            shotgunTime -= 1;
+            document.getElementById('shotNum').innerText = `${shotgunTime} seconds left`;
+            if (shotgunTime <= 0){
+                chickensPerClick = chickensPerClick/2;
+                document.getElementById('showChickensPerClick').innerText = chickensPerClick;
+                chickensPerSecond = chickensPerSecond/2;
+                document.getElementById('showChickensPerSecond').innerText = chickensPerSecond;
+                clearInterval(bubbaMultiplier);
+                document.getElementById('shotNum').innerText = `30 seconds left`;
+            }
+        }, 1000)
+        shotgunTime = 30;
     } else {
         alert("You don't have enough chickens!")
     }
