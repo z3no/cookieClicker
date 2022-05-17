@@ -13,12 +13,16 @@ let axes = 0;
 let foxes = 0;
 let shotguns = 0
 
-// Chicken incremen button
+// buttons
+// Chicken increment button
 const clicker = document.getElementById('clickButton');
 clicker.addEventListener("click", increment);
-
+// Jack Hack buy button
 const axeBuyBtn = document.getElementById('buyAxe');
 axeBuyBtn.addEventListener("click", buyAxe);
+// Fantastic Mr. Fox buy button
+const foxBuyBtn = document.getElementById('buyFox');
+foxBuyBtn.addEventListener('click', buyFox);
 
 //function that gets called each time you click the chicken
 function increment() {
@@ -53,6 +57,26 @@ function buyAxe(){
         chickensPerClick *= 2;
         document.getElementById('showChickensPerClick').innerText = chickensPerClick;
     } else {
+        alert("You don't have enough dead chickens!")
+    }
+}
+// called when the user buys the Fantastic Mr. Fox
+function buyFox(){
+    // check if you have enough chickens
+    if (chickens >= foxCost){
+        //subtract the cost
+        chickens -= foxCost;
+        document.getElementById('showChickens').innerText = chickens;
+        //increment the number of Mr. Foxes you own
+        foxes++;
+        document.getElementById('foxNum').innerText = foxes;
+        //triple the price after buying
+        foxCost *= 3;
+        document.getElementById('foxCost').innerText = foxCost;
+        //increase the chickens per second
+        chickensPerSecond += 1;
+        document.getElementById('showChickensPerSecond').innerText = chickensPerSecond;
+    } else { //if you don't have enough chickens
         alert("You don't have enough dead chickens!")
     }
 }
