@@ -70,7 +70,7 @@ A 2 day project we had to work on during our course at [BeCode](https://becode.o
     - [x] Show the cost
     - [x] Information about what it does
     - [x] A buy button
-- [ ] JavaScript necessities
+- [x] JavaScript necessities
   - [x] Variables
     - [x] buttons, main clicker, buy
     - [x] counter
@@ -79,14 +79,14 @@ A 2 day project we had to work on during our course at [BeCode](https://becode.o
     - [x] improvements (amount)
     - [x] cost/price of improvements
     - [x] timer
-  - [ ] Improvements
+  - [x] Improvements
     - [x] Increase the cost once bought
     - [x] Multiply the clicks per click
     - [x] Update the amount of improvements you have
     - [x] Auto-clicker, clicks per second
     - [x] Bonus improvement
     - [x] Timer that counts down
-    - [ ] Deactivate the buy buttons if you don't have enough chickens (credits)
+    - [x] Deactivate the buy buttons if you don't have enough chickens (credits)
 - [ ] CSS
   - [ ] Style paragraphs
   - [ ] Style the headings
@@ -95,3 +95,4 @@ A 2 day project we had to work on during our course at [BeCode](https://becode.o
   - [ ] Position the improvements nicely
   - [ ] Position the clicker with counter, /click and /second display
   - [ ] Position everything with the help of flexbox (learn flexbox)
+  - [ ] Make it responsive
