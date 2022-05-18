@@ -4,8 +4,8 @@ let chickensPerSecond = 0;
 let chickensPerClick = 1;
 
 // cost of items
-let axeCost = 25;
-let foxCost = 30;
+let foxCost = 20;
+let axeCost = 45;
 let shotCost = 1000;
 
 // how many items you have
@@ -25,7 +25,7 @@ const foxBuyBtn = document.getElementById('buyFox');
 foxBuyBtn.addEventListener('click', buyFox);
 // Bubba Blue "Trigger" button
 const shotgunBuyBtn = document.getElementById('buyShotgun');
-shotgunBuyBtn.addEventListener("click", buyBubba);
+shotgunBuyBtn.addEventListener("click", buyBubba, showBuyButton);
 
 //function that gets called each time you click the chicken
 function increment() {
@@ -78,7 +78,7 @@ function buyFox(){
         foxCost *= 3;
         document.getElementById('foxCost').innerText = foxCost;
         //increase the chickens per second
-        chickensPerSecond += 1;
+        chickensPerSecond += 4;
         document.getElementById('showChickensPerSecond').innerText = chickensPerSecond;
     } else { //if you don't have enough chickens
         alert("You don't have enough chickens!")
@@ -113,5 +113,13 @@ function buyBubba(){
         shotgunTime = 30;
     } else {
         alert("You don't have enough chickens!")
+    }
+}
+
+function showBuyButton() {
+    if (chickens === shotCost){
+        document.getElementById('buyShotgun').style.visibility = "";
+    } else {
+        document.getElementById('buyShotgun').style.visibility = "hidden";
     }
 }
