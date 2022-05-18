@@ -21,13 +21,17 @@ clicker.addEventListener("click", hideBuyButtons);
 // Jack Hack buy button
 const axeBuyBtn = document.getElementById('buyAxe');
 axeBuyBtn.addEventListener("click", buyAxe);
+axeBuyBtn.addEventListener("click", hideBuyButtons);
 // Fantastic Mr. Fox buy button
 const foxBuyBtn = document.getElementById('buyFox');
 foxBuyBtn.addEventListener('click', buyFox);
+foxBuyBtn.addEventListener("click", hideBuyButtons);
 // Bubba Blue "Trigger" button
 const shotgunBuyBtn = document.getElementById('buyShotgun');
 shotgunBuyBtn.addEventListener("click", buyBubba);
+shotgunBuyBtn.addEventListener("click", hideBuyButtons);
 
+hideBuyButtons();
 
 
 //function that gets called each time you click the chicken
@@ -40,18 +44,19 @@ function increment() {
     }
 }
 
-function hideBuyButtons() {
-    foxBuyBtn.hidden = chickens < foxCost;
-    axeBuyBtn.hidden = chickens < axeCost;
-    shotgunBuyBtn.hidden = chickens < shotCost;
-}
-
 //function that happens every second
 setInterval(function (){
     chickens += chickensPerSecond //adds the number of chickens per second to your total chickens
 
     document.getElementById('showChickens').innerText = chickens;
 }, 1000)
+
+//function if you don't have enough chickens, buy buttons are disabled
+function hideBuyButtons() {
+    foxBuyBtn.disabled = chickens < foxCost;
+    axeBuyBtn.disabled = chickens < axeCost;
+    shotgunBuyBtn.disabled = chickens < shotCost;
+}
 
 //will be called when user presses the buy button for the axe
 function buyAxe(){
