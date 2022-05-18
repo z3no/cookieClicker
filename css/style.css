@@ -60,14 +60,17 @@ main {
 }
 
 .multiplier {
-  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
 }
 
 .containerImage {
-  width: 40%;
+  width: 30%;
+  padding: 2rem;
+}
+.containerImage img:hover {
+  -webkit-animation: bounce 0.75s infinite;
 }
 
 .multiplierImage {
@@ -78,7 +81,8 @@ main {
 .multiplierText {
   font-size: 0.7rem;
   text-align: left;
-  width: 60%;
+  width: 70%;
+  padding: 2rem 0;
 }
 
 /* for smaller screens */
@@ -131,6 +135,21 @@ main {
 }
 .buyButton:active {
   opacity: 1;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1, 1) translate(0px, 0px);
+  }
+  30% {
+    transform: scale(1, 0.9) translate(0px, 10px);
+  }
+  75% {
+    transform: scale(1, 1.1) translate(0px, -25px);
+  }
+  100% {
+    transform: scale(1, 1) translate(0px, 0px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
