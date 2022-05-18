@@ -17,6 +17,7 @@ let shotgunTime = 30;
 // Chicken increment button
 const clicker = document.getElementById('clickButton');
 clicker.addEventListener("click", increment);
+clicker.addEventListener("click", hideBuyButtons);
 // Jack Hack buy button
 const axeBuyBtn = document.getElementById('buyAxe');
 axeBuyBtn.addEventListener("click", buyAxe);
@@ -25,7 +26,9 @@ const foxBuyBtn = document.getElementById('buyFox');
 foxBuyBtn.addEventListener('click', buyFox);
 // Bubba Blue "Trigger" button
 const shotgunBuyBtn = document.getElementById('buyShotgun');
-shotgunBuyBtn.addEventListener("click", buyBubba, showBuyButton);
+shotgunBuyBtn.addEventListener("click", buyBubba);
+
+
 
 //function that gets called each time you click the chicken
 function increment() {
@@ -35,6 +38,12 @@ function increment() {
     if (chickens >= 7800000000) {
         document.getElementById('gameOver').innerText = "You won the game! There will never be fried chicken again :'("
     }
+}
+
+function hideBuyButtons() {
+    foxBuyBtn.hidden = chickens < foxCost;
+    axeBuyBtn.hidden = chickens < axeCost;
+    shotgunBuyBtn.hidden = chickens < shotCost;
 }
 
 //function that happens every second
@@ -113,13 +122,5 @@ function buyBubba(){
         shotgunTime = 30;
     } else {
         alert("You don't have enough chickens!")
-    }
-}
-
-function showBuyButton() {
-    if (chickens === shotCost){
-        document.getElementById('buyShotgun').style.visibility = "";
-    } else {
-        document.getElementById('buyShotgun').style.visibility = "hidden";
     }
 }
